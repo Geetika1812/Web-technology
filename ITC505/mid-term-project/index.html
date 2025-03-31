@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokémon Trainer's Quest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon Trainer's Quest 🎮</h1>
+        <div id="story-text">Welcome to Pallet Town! Professor Oak is waiting...</div>
+        <div id="choices" class="choices-container"></div>
+        <img id="story-image" src="images/oak-lab.jpg" alt="Pokémon adventure begins">
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="last-updated">
+                <p>Last updated: <span id="lastModified"></span></p>
+            </div>
+            
+            <div class="addendum">
+                <h3>Addendum</h3>
+                <div class="process-details">
+                    <p><strong>Creative Process:</strong> Designed three unique story arcs emphasizing each starter's strengths. Bulbasaur's grass-type advantage against Misty, Charmander's fiery showdown with Team Rocket, and Squirtle's underdog training journey.</p>
+                    
+                    <p><strong>Challenges Overcome:</strong> Balancing difficulty across paths while maintaining distinct personalities. Solved by giving each Pokémon signature mechanics (Sun Stone, Charcoal, Evolution).</p>
+                    
+                    <p><strong>Key Insights:</strong> Simple choice structures work best when paired with strong thematic elements. Players enjoy seeing Pokémon's unique traits reflected in gameplay.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
