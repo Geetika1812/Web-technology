@@ -1,0 +1,74 @@
+body {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "nav main ad"
+                         "footer footer footer";
+    grid-template-rows: 80px 1fr auto;
+    grid-template-columns: 200px 1fr 200px;
+    height: auto;
+    gap: 10px;
+    background-color: #f4f4f4;
+}
+
+header { 
+    grid-area: header; 
+    background: #3498db; 
+    padding: 10px; 
+    text-align: center; 
+    color: white; 
+}
+
+nav { 
+    grid-area: nav; 
+    background: #2ecc71; 
+    padding: 10px; 
+    color: white; 
+}
+
+main { 
+    grid-area: main; 
+    padding: 10px; 
+    background: #ecf0f1; 
+    text-align: center; 
+}
+
+aside { 
+    grid-area: ad; 
+    text-align: center; 
+    background: #e74c3c; 
+    padding: 10px; 
+}
+
+footer { 
+    grid-area: footer; 
+    background: #2c3e50; 
+    padding: 15px; 
+    text-align: center; 
+    color: white; 
+    border-top: 3px solid #f39c12; 
+}
+
+.addendum {
+    background: #2c3e50; /* Ensuring background covers full width */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+    font-size: 1em;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    background: #9b59b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #8e44ad;
+}
