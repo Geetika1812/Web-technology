@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout with JS</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas: "header header header"
+                                 "nav main ad"
+                                 "footer footer footer";
+            grid-template-rows: 80px 1fr auto;
+            grid-template-columns: 200px 1fr 200px;
+            height: auto;
+            gap: 10px;
+            background-color: #f4f4f4;
+        }
+        header { grid-area: header; background: #3498db; padding: 10px; text-align: center; color: white; }
+        nav { grid-area: nav; background: #2ecc71; padding: 10px; color: white; }
+        main { grid-area: main; padding: 10px; background: #ecf0f1; text-align: center; }
+        aside { 
+            grid-area: ad; 
+            text-align: center; 
+            background: #e74c3c; 
+            padding: 10px; 
+        }
+        footer { 
+            grid-area: footer; 
+            background: #2c3e50; 
+            padding: 15px; 
+            text-align: center; 
+            color: white; 
+            border-top: 3px solid #f39c12; 
+        }
+        .addendum {
+            background: #2c3e50; /* Ensuring background covers full width */
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            text-align: left;
+            font-size: 1em;
+            max-width: 800px;
+            margin: 0 auto;
+            box-sizing: border-box; /* Prevents padding from affecting width */
+        }
+        button { padding: 10px; margin-top: 10px; background: #9b59b6; color: white; border: none; cursor: pointer; }
+        button:hover { background: #8e44ad; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sorting Algorithm Demonstration</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" style="color: white;">Home</a></li>
+            <li><a href="#" style="color: white;">About</a></li>
+            <li><a href="#" style="color: white;">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Reverse Order Sort Example</h2>
+        <p>Enter numbers separated by commas and click sort:</p>
+        <input type="text" id="userInput" placeholder="e.g. 5,3,8,4,2">
+        <button onclick="reverseSortArray()">Sort in Reverse</button>
+        <p id="result"></p>
+    </main>
+    <aside>
+        <a href="https://www.amazon.com/Sorting-Algorithms-Handbook-Practical-Implementations-ebook/dp/B0CGJXWQV2/ref=sr_1_7" target="_blank" style="display: block;">
+            <img src="https://m.media-amazon.com/images/I/71J2YX2yVoL._SL1500_.jpg" 
+                 alt="Sorting Algorithm" 
+                 style="width: 100%; max-width: 150px; display: block;">
+        </a>
+    </aside>
+    
+    <footer>
+        <p class="addendum">
+            <strong>Addendum:</strong><br>
+            • This project demonstrates a simple Reverse Order Sorting algorithm using JavaScript.<br>
+            • The script allows users to input numbers, which are then sorted in descending order upon clicking a button.<br>
+            • Input validation ensures only valid numbers are processed.<br>
+            • The layout is designed using a responsive CSS Grid for a structured UI.<br>
+            • Future improvements may include additional sorting algorithms and interactive visualizations.
+        </p>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    
+    <script>
+        function reverseSortArray() {
+            let input = document.getElementById("userInput").value;
+            
+            // Convert input string to an array of numbers
+            let numbers = input.split(",").map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
+            
+            // Check if input is valid
+            if (numbers.length === 0) {
+                document.getElementById("result").textContent = "Please enter a valid list of numbers.";
+                return;
+            }
+
+            // Reverse Order Sorting Algorithm (Descending Order)
+            numbers.sort((a, b) => b - a);
+
+            // Display sorted numbers
+            document.getElementById("result").textContent = "Sorted in Reverse Order: " + numbers.join(", ");
+        }
+
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
+    
