@@ -36,6 +36,3 @@ function submitForm(event) {
     alert("Successfully submitted!");
     document.querySelector("form").reset();
 }
-
-// Set last modified date
-document.getElementById('lastModified').textContent = document.lastModified;
