@@ -114,7 +114,7 @@ input, textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 98%;
+    width: 96%;
 }
 
 input[type="text"], input[type="email"] {
