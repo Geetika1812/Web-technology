@@ -1,14 +1,21 @@
 body {
     display: grid;
-    grid-template-areas: "header header header"
-                         "nav main ad"
-                         "footer footer footer";
+    grid-template-areas: 
+        "header header header"
+        "nav main ad"
+        "footer footer footer";
     grid-template-rows: 80px 1fr auto;
     grid-template-columns: 200px 1fr 200px;
-    height: auto;
+    height: 100vh;
     gap: 10px;
     background-color: #f4f4f4;
+    margin: 0;
+    background-image: url('https://img.freepik.com/premium-photo/visualization-sorting-algorithm-data-illustration-abstract-background-analysis-system-innovation-software-visualization-sorting-algorithm-data_87720-36803.jpg');
+    background-size: cover;
+    background-position: center;
 }
+
+
 
 header { 
     grid-area: header; 
@@ -23,6 +30,22 @@ nav {
     background: #2ecc71; 
     padding: 10px; 
     color: white; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
 }
 
 main { 
@@ -49,7 +72,7 @@ footer {
 }
 
 .addendum {
-    background: #2c3e50; /* Ensuring background covers full width */
+    background: #2c3e50;
     padding: 10px;
     border-radius: 5px;
     color: white;
@@ -57,7 +80,7 @@ footer {
     font-size: 1em;
     max-width: 800px;
     margin: 0 auto;
-    box-sizing: border-box; /* Prevents padding from affecting width */
+    box-sizing: border-box;
 }
 
 button {
@@ -71,4 +94,27 @@ button {
 
 button:hover {
     background: #8e44ad;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section:first-child {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 98%;
 }
