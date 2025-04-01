@@ -15,8 +15,6 @@ body {
     background-position: center;
 }
 
-
-
 header { 
     grid-area: header; 
     background: #3498db; 
@@ -117,4 +115,8 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 98%;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
 }
